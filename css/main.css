@@ -620,9 +620,9 @@ div.staff img {
   padding: 0 1rem;
 }
 
-@media only screen and (max-device-width: 1366px)  {
-    body {
-      min-height: 100vh;
+@media only screen and (max-device-width: 1365px)  {
+    .controls {
+      right: 3rem;
     }
 
     .f-btn {
@@ -632,5 +632,10 @@ div.staff img {
 
     .f-btn:before, .f-btn:after {
       line-height: 4rem;
+      font-size: 2rem;
     }
+}
+
+body, .app {
+  overflow: hidden;
 }
