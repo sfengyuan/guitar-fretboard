@@ -508,6 +508,10 @@ a {
   display: inline-block;
 }
 
+#app {
+  min-height: 100vh;
+}
+
 body, #app {
   overflow: auto;
 }
