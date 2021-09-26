@@ -1,0 +1,621 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+:root {
+  --fret-color: #999;
+  --fret-marker-color: #999;
+  --a-color: #EB5937;
+  --primary-color: #EB5937;
+  --title-color: #EB5937;
+  --as-color: #EF7F65;
+  --b-color: #EBB437;
+  --c-color: #D2E235;
+  --cs-color: #DCE962;
+  --d-color: #6CD031;
+  --ds-color: #8CDB5C;
+  --e-color: #2FC783;
+  --f-color: #2F43C7;
+  --fs-color: #596AD3;
+  --g-color: #6C2FC7;
+  --gs-color: #8A59D3;
+  --staff-color: #0C0C0C;
+}
+
+body {
+  font-family: 'Cutive Mono', monospace;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+#fretboard {
+  color: #FFF;
+  font-weight: 600;
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+
+.fret {
+  width: 70px;
+  height: 38px;
+  border: 1px solid var(--fret-color);
+  border-right: 0;
+  border-bottom: 0;
+  position: relative;
+}
+
+.fret:last-child {
+  border-right:3px solid var(--fret-color);
+}
+
+.row:last-child .fret {
+  height: 0;
+}
+
+.fret:first-child {
+  width: 10px;
+  border-left: 0;
+}
+
+.fret:nth-child(2) {
+  border-left: 6px solid var(--fret-color);
+}
+
+.fret:first-child::before {
+  left: -28px;
+}
+.fret-octave-2 .note-container {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+.fret-octave-3 .note-container {
+  border-radius: 9999px;
+}
+.fret-octave-4 .note-container {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  padding-left: 2px;
+}
+.fret-octave-5 .note-container {
+  transform: skew(-20deg) scale(0.9);
+  padding-left: 3px;
+}
+
+.fret-a .note-container {
+  background-color: var(--a-color);
+}
+.fret-a-sharp .note-container {
+  background-color: var(--as-color);
+}
+.fret-b .note-container {
+  background-color: var(--b-color);
+}
+.fret-c .note-container {
+  background-color: var(--c-color);
+}
+.fret-c-sharp .note-container {
+  background-color: var(--cs-color);
+}
+.fret-d .note-container {
+  background-color: var(--d-color);
+}
+.fret-d-sharp .note-container {
+  background-color: var(--ds-color);
+}
+.fret-e .note-container {
+  background-color: var(--e-color);
+}
+.fret-f .note-container {
+  background-color: var(--f-color);
+}
+.fret-f-sharp .note-container {
+  background-color: var(--fs-color);
+}
+.fret-g .note-container {
+  background-color: var(--g-color);
+}
+.fret-g-sharp .note-container {
+  background-color: var(--gs-color);
+}
+
+.note-container {
+  display: block;
+  position: relative;
+  top: -19px;
+  left: 14px;
+  font-size: 24px;
+  background: green;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  transition: all 0.5s 0s;
+}
+
+.note-container:hover {
+  cursor: pointer;
+}
+
+.fret.highlight .note-container {
+  top: -23px;
+  transform: scale(1.5);
+  box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 50px 0px 0px 0px rgba(136,136,136,0);
+}
+
+.fret.highlight.fret-octave-5 .note-container {
+  transform: skew(-20deg) scale(1.5);
+}
+.accidents {
+  font-size: 14px;
+}
+
+.quote {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.accidents, .quote {
+  position: relative;
+  top: -6px;
+}
+.quote {
+  left: -3px;
+}
+.quote.following-quote {
+  left: -12px;
+}
+
+.fret::after {
+  color: var(--fret-color);
+}
+
+.row:nth-child(3) .fret:nth-child(4)::after,
+.row:nth-child(3) .fret:nth-child(6)::after,
+.row:nth-child(3) .fret:nth-child(8)::after,
+.row:nth-child(3) .fret:nth-child(10)::after,
+.row:nth-child(2) .fret:nth-child(13)::after,
+.row:nth-child(4) .fret:nth-child(13)::after,
+.row:nth-child(3) .fret:nth-child(16)::after,
+.row:nth-child(3) .fret:nth-child(18)::after,
+.row:nth-child(3) .fret:nth-child(20)::after
+{
+  content: '';
+  display: block;
+  /* background: var(--fret-marker-color); */
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0px;
+  bottom: 19px;
+  border-radius: 9999px;
+}
+
+.row:nth-child(3) .fret:nth-child(4)::after {
+  content: '❸';
+}
+
+.row:nth-child(3) .fret:nth-child(6)::after {
+  content: '❺'
+}
+
+.row:nth-child(3) .fret:nth-child(8)::after {
+  content: '❼'
+}
+
+.row:nth-child(3) .fret:nth-child(10)::after {
+  content: '❾'
+}
+
+.row:nth-child(2) .fret:nth-child(13)::after,
+.row:nth-child(4) .fret:nth-child(13)::after {
+  content: '⓬'
+}
+
+.row:nth-child(3) .fret:nth-child(16)::after {
+  content: '⓯'
+}
+
+.row:nth-child(3) .fret:nth-child(18)::after {
+  content: '⓱'
+}
+
+.row:nth-child(3) .fret:nth-child(20)::after {
+  content: '⓳'
+}
+
+#fretboard.simple-mode .fret-accidents .note-container {
+  display:none;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.title a {
+  text-decoration: none;
+  background: var(--title-color);
+  color: #FFF;
+  padding: 15px;
+  transform: skew(30deg);
+}
+
+.controls {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+}
+
+.controls input {
+  display: none;
+  box-sizing: border-box;
+}
+
+
+.f-input::selection, .f-input:after::selection, .f-input:before::selection, .f-input *::selection, .f-input *:after::selection, .f-input *:before::selection, .f-btn::selection {
+  background: none;
+}
+
+.f-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  transform: skew(-10deg);
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  background: #888;
+}
+
+.f-btn:after, .f-btn:before {
+  content: "";
+  transform: skew(10deg);
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.f-btn:after {
+  left: 100%;
+  content: attr(data-label-on);
+}
+.f-btn:before {
+  left: 0;
+  content: attr(data-label-off);
+}
+.f-input:checked + .f-btn:after {
+  left: 50%;
+}
+.f-btn:active {
+  background: #888;
+}
+.f-btn:active:before {
+  left: -10%;
+}
+.f-input:checked + .f-btn {
+  background: #86d993;
+}
+.f-input:checked + .f-btn:before {
+  left: -100%;
+}
+.f-input:checked + .f-btn:after {
+  left: 0;
+}
+.f-input:checked + .f-btn:active:after {
+  left: 10%;
+}
+
+.f-btn {
+box-shadow: 5px 5px 0px 0px #6CD031, 10px 10px 0px 0px #85D854, 15px 15px 0px 0px #9EE077, 20px 20px 0px 0px #B7E89A, 25px 25px 0px 0px #D0F0BD, 50px 0px 0px 0px rgba(136,136,136,0);
+}
+
+div.staff {
+
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+div.staff img {
+  width: 100%;
+  height: auto;
+}
+
+#staff-guitar {
+  height: 194px;
+  background-color: #333;
+  -webkit-mask-image: url(https://sunfy.xyz/guitar-fretboard/img/staff-guitar.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(https://sunfy.xyz/guitar-fretboard/img/staff-guitar.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.footer {
+  font-size: 10px;
+  padding: 0 1rem;
+}
