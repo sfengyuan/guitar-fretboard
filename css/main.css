@@ -619,3 +619,18 @@ div.staff img {
   font-size: 10px;
   padding: 0 1rem;
 }
+
+@media only screen and (max-device-width: 1366px)  {
+    body {
+      min-height: 100vh;
+    }
+
+    .f-btn {
+      width: 8rem;
+      height: 4rem;
+    }
+
+    .f-btn:before, .f-btn:after {
+      line-height: 4rem;
+    }
+}
