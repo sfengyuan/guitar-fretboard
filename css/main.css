@@ -282,7 +282,43 @@ textarea {
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#app {
+  position: relative;
+  width: 1300px;
+  height: 600px;
+}
+
+body, #app {
+  overflow: auto;
+}
+body {
   font-family: 'Cutive Mono', monospace;
+  box-sizing: border-box;
+}
+.footer {
+  z-index: 9999;
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.controls {
+  z-index: 9999;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+}
+
+.controls input {
+  display: none;
   box-sizing: border-box;
 }
 
@@ -293,7 +329,7 @@ a {
 #fretboard {
   color: #FFF;
   font-weight: 600;
-  margin-top: 2rem;
+  margin-top: 32px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -496,8 +532,8 @@ a {
 
 .title {
   text-align: center;
-  margin-bottom: 5rem;
-  margin-top: 1rem;
+  margin-bottom: 50px;
+  margin-top: 32px;
 }
 
 .title a {
@@ -506,27 +542,6 @@ a {
   color: #FFF;
   padding: 15px;
   display: inline-block;
-}
-
-#app {
-  min-height: 100vh;
-}
-
-body, #app {
-  overflow: auto;
-}
-
-
-.controls {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 100px;
-}
-
-.controls input {
-  display: none;
-  box-sizing: border-box;
 }
 
 
@@ -624,23 +639,18 @@ div.staff img {
   mask-size: contain;
 }
 
-.footer {
-  font-size: 10px;
-  padding: 0 1rem;
-}
-
 @media only screen and (max-device-width: 1365px)  {
     .controls {
-      right: 3rem;
+      right: 30px;
     }
 
     .f-btn {
-      width: 8rem;
-      height: 4rem;
+      width: 80px;
+      height: 40px;
     }
 
     .f-btn:before, .f-btn:after {
-      line-height: 4rem;
-      font-size: 2rem;
+      line-height: 40px;
+      font-size: 20px;
     }
 }

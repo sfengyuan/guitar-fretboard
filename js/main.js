@@ -18,7 +18,6 @@ const choose = 'standard'
 const style = 2
 const layout = layouts[choose]
 function start () {
-  console.log('layout', layout)
   const fretboard = document.querySelector('#fretboard')
   for (let i = 0; i < layout.length; i++) {
     const row = document.createElement('div')
@@ -95,7 +94,6 @@ function registerHandlers () {
     }
     ev.stopPropagation()
     const note = ev.target.dataset.note || ev.target.parentNode.dataset.note
-    console.log(note)
     document.querySelectorAll('.fret-' + note).forEach(f => f.classList.add('highlight'))
   })
 
