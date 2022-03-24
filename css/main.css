@@ -295,7 +295,7 @@ body {
 }
 
 body, #app {
-  overflow: auto;
+  /* overflow: auto; */
 }
 body {
   font-family: 'Cutive Mono', monospace;
