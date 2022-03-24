@@ -1,3 +1,3 @@
 # guitar-fretboard
 
-[https://sunfy.xyz/guitar-fretboard/](https://sunfy.xyz/guitar-fretboard/)
+[https://sfengyuan.github.io/guitar-fretboard/](https://sfengyuan.github.io/guitar-fretboard/)
