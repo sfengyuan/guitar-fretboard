@@ -315,6 +315,8 @@ body {
   right: 0;
   bottom: 0;
   width: 100px;
+  display: flex;
+  flex-flow: column no-wrap;
 }
 
 .controls input {
@@ -629,11 +631,11 @@ div.staff img {
 #staff-guitar {
   height: 194px;
   background-color: #333;
-  -webkit-mask-image: url(https://sunfy.xyz/guitar-fretboard/img/staff-guitar.svg);
+  -webkit-mask-image: url(https://sfengyuan.github.io/guitar-fretboard/img/staff-guitar.svg);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
-  mask-image: url(https://sunfy.xyz/guitar-fretboard/img/staff-guitar.svg);
+  mask-image: url(https://sfengyuan.github.io/guitar-fretboard/img/staff-guitar.svg);
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
